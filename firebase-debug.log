@@ -1,0 +1,44 @@
+[debug] [2022-07-13T19:17:14.332Z] ----------------------------------------------------------------------
+[debug] [2022-07-13T19:17:14.334Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Diseño 01\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-07-13T19:17:14.335Z] CLI Version:   11.2.2
+[debug] [2022-07-13T19:17:14.335Z] Platform:      win32
+[debug] [2022-07-13T19:17:14.335Z] Node Version:  v16.16.0
+[debug] [2022-07-13T19:17:14.337Z] Time:          Wed Jul 13 2022 14:17:14 GMT-0500 (hora de verano central)
+[debug] [2022-07-13T19:17:14.338Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-13T19:17:14.349Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-13T19:17:14.350Z] > authorizing via signed-in user (noedelaflor@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Diseño 01\Documents\Web Design Center\firebase\sello-idi
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-07-13T19:17:42.927Z] > refreshing access token with scopes: []
+[debug] [2022-07-13T19:17:42.930Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-07-13T19:17:42.930Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-07-13T19:17:43.127Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-07-13T19:17:43.127Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-07-13T19:17:43.186Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2022-07-13T19:17:43.186Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"selloidi-static","name":"selloidi-static"}
+[debug] [2022-07-13T19:17:43.595Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2022-07-13T19:17:43.596Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2022-07-13T19:17:43.747Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\Diseño 01\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\Diseño 01\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:287:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID selloidi-static. Please try again with a unique project ID.

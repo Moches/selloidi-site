@@ -1,0 +1,266 @@
+/* CSS by Moches (c) 2022 */
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* GLOBALS, RESETS AND FIXES */
+:root {
+    --red: #F05566;
+    --yellow: #F5BC5C;
+    --blue: #368DCC;
+    --white: #ffffff;
+    --lightgray: #cfcfcf;
+    --black: #000000;
+    --copy: #222222;
+    font-size: 16px;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,h1,h2,h3,h4,h5,h6,p,ol,ul {
+    font-weight: normal;
+}
+
+ol,ul {
+    list-style: none
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+button {
+    font-family: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent
+}
+
+button::-moz-focus-inner {
+    border: 0
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    cursor: default
+}
+
+/* HEADER, LOGO, MAIN NAVIGATION, MOBILE MENU AND LOGIN */
+body {
+    background-color: var(--yellow);
+}
+.header-container {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--red);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 100;
+    position: fixed;
+}
+.nav-container{
+    width: 90rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color:var(--red);
+}
+.logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    padding: 0 0 0 0.9375rem;
+}
+.nav-links{
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links li{
+    display: inline;
+    margin: 0 0.625rem;
+}
+.nav-links li a{
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);  
+    text-transform: uppercase; 
+}
+.nav-links li a:hover{
+    color: var(--lightgray);
+    transition: color 0.3s ease-in;
+}
+.loginRegister{
+    padding: 0 1.25rem 0 0;
+}
+.loginRegister a{
+    color: var(--white);
+    height: 5rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+.loginRegister a:hover{
+    color: var(--lightgray);
+    transition: color 0.3s ease-in;
+}
+.fa-solid.fa-right-to-bracket{
+    font-size: 1.125rem;
+    margin: 0 0 0 0.3125rem;
+}
+
+/* MOBILE MENU */
+.toggle{
+    display: none;
+}
+
+/* HAMBURGER MENU */
+.item1, .item2, .item3{
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--white);
+    margin: 6px 0;
+}
+
+/* HERO UNIT */
+.heroSlider {
+    width: 100vh;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    background-color: var(--white);
+}
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.hero-slides {
+    background-image: url(../_assets/image-holder-1920x1280.jpg);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+/* BENEFICIOS */
+section.beneficios{
+    background-color: #F5BC5C;
+}
+
+/* COMO OBTENER EL SELLO IDI */
+section.obtenerlo{
+    background-color: #cfcfcf;
+}
+
+/* CERTIFICATE */
+section.certificate{
+    background-color: #F05566;
+}
+
+/* BIG CTA */
+section.big-cta{
+    background-color: aquamarine;
+}
+
+/* ORGANIZACIONES CERTIFICADAS */
+section.organizaciones{
+    background-color: #cfcfcf;
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    background: var(--blue);
+}
+footer .copyright {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    color: var(--white);
+    background: var(--black);
+    padding: 1rem 0;
+}
+
+/* COPYRIGHT NOTICE */
+.copy, .registered {
+    display: flex;
+    width: 50%;
+}
+.copy {
+    justify-content: flex-start;
+    margin-left: 1.5rem;
+}
+.copy::after{
+    content: "\00A9";
+    margin-left:0.5rem
+}
+.registered{
+    justify-content: flex-end;
+    margin-right: 1.5rem;
+}
+.registered::after{
+    content: "\00AE";
+    margin-left: 0.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1440px) {
+    body{
+        background-color: var(--white);
+    }
+}
+
+@media (min-width: 105rem) {
+    body{
+        background-color: var(--red);
+    }
+}
+
+@media (min-width: 120rem) {
+    body{
+        background-color: var(--blue);
+    }
+}
+
+
