@@ -150,7 +150,7 @@ body {
 }
 
 /* HERO UNIT */
-.heroSlider {
+/* .heroSlider {
     width: 100vh;
     height: 100vh;
     display: block;
@@ -180,31 +180,173 @@ body {
     background-position: center center;
     background-size: cover;
 
+} */
+
+.heroSlider {
+    background: var(--lightgray); /* Only temporary before javascript*/
+    padding-top: 5rem;
 }
 
 /* BENEFICIOS */
 section.beneficios{
-    background-color: #F5BC5C;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.beneficios-wrapper{
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.beneficios-title{
+    color: var(--copy);
+    font-size: 2.625rem;
+    font-weight:700;
+    padding: 2.625rem 0;
+}
+.beneficios-copy{
+    color: #222222;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-justify: auto;
+}
+.beneficios-cta {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+.beneficios-cta h2 {
+    max-width: 25rem;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+}
+.beneficios-cta a {
+    background: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
+.beneficios-cta a span{
+    margin-left: 1rem;
+    display: inline;
+}
+.sello-idi img{
+    margin: 1rem 0;
 }
 
 /* COMO OBTENER EL SELLO IDI */
 section.obtenerlo{
-    background-color: #cfcfcf;
+    background-color:var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.obtenerlo-wrapper {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.obtenerlo-title {
+    color: var(--blue);
+    font-size: 2.625rem;
+    font-weight:700;
+    padding: 2.625rem 0;
+    text-align: center;
+}
+.steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.step1, .step2, .step3 {
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+.step1 {
+    color: var(--blue);
+}
+.step2 {
+    color: var(--yellow);
+}
+.step3 {
+    color: var(--red);
+}
+.step1::before {
+    content: "1";
+    margin-right: 1rem;
+}
+.step2::before {
+    content: "2";
+    margin-right: 1rem;
+}
+.step3::before {
+    content: "3";
+    margin-right: 1rem;
+}
+.obtenerlo-copy {
+    color: #222222;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-justify: auto;
 }
 
-/* CERTIFICATE */
+
+/* CERTIFICA TU ORGANIZACION */
 section.certificate{
-    background-color: #F05566;
+    background-color: var(--yellow);
 }
 
 /* BIG CTA */
 section.big-cta{
-    background-color: aquamarine;
+    background-color: var(--red);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.big-cta-wrapper {
+    max-width: 75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 3rem 0;
+}
+.big-cta-title {
+    font-size: 2.625rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    padding: 3rem 0;
+}
+.big-cta-wrapper a {
+    background: var(--white);
+    color: var(--red);
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
+.big-cta-wrapper a span {
+    margin-left: 1rem;
+    display: inline;
 }
 
 /* ORGANIZACIONES CERTIFICADAS */
 section.organizaciones{
-    background-color: #cfcfcf;
+    background-color: var(--white);
 }
 
 /* FOOTER */
