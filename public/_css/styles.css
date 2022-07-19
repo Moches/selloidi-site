@@ -59,6 +59,7 @@ a {
 
 h1,h2,h3,h4,h5,h6,p {
     cursor: default
+    color: var(--copy)
 }
 
 /* HEADER, LOGO, MAIN NAVIGATION, MOBILE MENU AND LOGIN */
@@ -283,17 +284,14 @@ section.obtenerlo{
 .step3 {
     color: var(--red);
 }
-.step1::before {
-    content: "1";
-    margin-right: 1rem;
+.steps-titles{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row-reverse;
+    align-items: center;
 }
-.step2::before {
-    content: "2";
-    margin-right: 1rem;
-}
-.step3::before {
-    content: "3";
-    margin-right: 1rem;
+.steps-titles img{
+    margin: 0 1rem 0 0;
 }
 .obtenerlo-copy {
     color: #222222;
@@ -306,6 +304,65 @@ section.obtenerlo{
 /* CERTIFICA TU ORGANIZACION */
 section.certificate{
     background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.certificate-wrapper {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.certificate-title {
+    color: var(--white);
+    font-size: 2.625rem;
+    font-weight: 700;
+    line-height: 1.4;
+    padding: 2.625rem 0;
+}
+.column-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.certificate-col1, .certificate-col2 {
+    max-width: 25rem;
+}
+.certificate-col1 img{
+    padding: 1rem;
+}
+.certificate-col2 {
+    padding: 0 0 0 1rem;
+}
+.certificate-copy {
+    color:var(--white);
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+    word-spacing: 0.125rem;
+}
+
+.certificate-copy-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.certificate-copy-wrapper a{
+    
+    background: var(--white);
+    color: var(--yellow);
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
+.certificate-copy-wrapper p:nth-child(3) {
+    padding-bottom: 2rem;
 }
 
 /* BIG CTA */
@@ -347,12 +404,60 @@ section.big-cta{
 /* ORGANIZACIONES CERTIFICADAS */
 section.organizaciones{
     background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.organizaciones-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+
+}
+.organizaciones-slider {
+    max-width: 75rem;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+}
+.organizaciones-title {
+    color: var(--copy);
+    font-size: 2.625rem;
+    font-weight: 700;
+    line-height: 1.4;
+    padding: 2.625rem 0 0 0;
+}
+.lista-organizaciones {
+    color: var(--copy);
+    text-decoration: underline;
+}
+.organizacion-slide img {
+    filter: grayscale(100%);
+    padding: 0 2rem;
+
+}
+.organizacion-slide img:hover {
+    filter: grayscale(0%);
 }
 
 /* FOOTER */
 footer{
     width: 100%;
     background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-wrapper {
+    max-width: 90rem;
+
 }
 footer .copyright {
     display: flex;
