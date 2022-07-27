@@ -151,8 +151,8 @@ body {
 }
 
 /* HERO UNIT */
-/* .heroSlider {
-    width: 100vh;
+.heroSlider {
+    max-width: 100vh;
     height: 100vh;
     display: block;
     overflow: hidden;
@@ -181,11 +181,21 @@ body {
     background-position: center center;
     background-size: cover;
 
-} */
+}
 
 .heroSlider {
     background: var(--lightgray); /* Only temporary before javascript*/
     padding-top: 5rem;
+}
+.more-buttons-wrapper{
+    z-index: 3;
+    position: relative;
+    top: 90%;
+    margin: 0 auto;
+}
+.slide-left {
+    position: relative;
+    top: 50%;
 }
 
 /* BENEFICIOS */
@@ -447,7 +457,7 @@ section.organizaciones{
 
 /* FOOTER */
 footer{
-    width: 100%;
+    max-width: 100%;
     background: var(--blue);
     display: flex;
     flex-direction: column;
@@ -456,20 +466,21 @@ footer{
 }
 
 .footer-wrapper {
-    width: 90rem;
+    width: 100%;
     background: var(--blue);
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    align-items: flex-start;
+    justify-content:center;
+    align-items: center;
     padding: 5rem 0;
 }
 .footer-columns {
-    width:90rem;
+    width:80%;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: flex-start;
+    overflow-x: hidden;
 
 }
 .footer-column {
@@ -538,10 +549,19 @@ a.contacto-footer {
 }
 
 /* COPYRIGHT NOTICE */
+div.copyright {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    
+}
 
 .copy, .registered {
-    display: flex;
-    width: 100%;
+    padding: 1rem 2rem;
+    color: var(--lightgray);
 }
 .copy {
     justify-content: flex-start;
