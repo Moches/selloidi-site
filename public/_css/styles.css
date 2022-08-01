@@ -63,9 +63,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 /* HEADER, LOGO, MAIN NAVIGATION, MOBILE MENU AND LOGIN */
-body {
-    background-color: var(--yellow);
-}
+
 .header-container {
     width: 100%;
     height: 5rem;
@@ -96,7 +94,7 @@ body {
 }
 .nav-links{
     display: flex;
-    height: 5rem;
+    min-height: 5rem;
     justify-content: center;
     align-items: center;
 }
@@ -582,22 +580,58 @@ div.copyright {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 1440px) {
-    body{
-        background-color: var(--white);
+/* 1100 px */
+@media screen and  (max-width: 68.75rem) {
+    .nav-links{
+        font-size: 0.825rem
     }
 }
-
-@media (min-width: 105rem) {
+/* 960 px */
+@media screen and (max-width: 60rem) {
     body{
+        overflow-x: hidden;
+    }
+    .toggle {
+        display: block;
+        margin-right: 2rem;
+        cursor: pointer;
+    }
+    .loginRegister {
+        display: none;;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0;
+        top: 5rem;
+        width:100%;
+        height: 92vh;
         background-color: var(--red);
+        flex-direction: column;
+        justify-content: flex-start;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .nav-links li a{
+        height: 3rem;
     }
 }
 
-@media (min-width: 120rem) {
-    body{
-        background-color: var(--blue);
-    }
+.nav-active {
+    transform: translateX(0%);
 }
 
+/* Animations */
+@keyframes navLinksFade {
+    from{
+        opacity: 0;
+        transform: translateX(3.125rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
