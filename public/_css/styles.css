@@ -30,7 +30,7 @@ body,h1,h2,h3,h4,h5,h6,p,ol,ul {
     font-weight: normal;
 }
 
-ol,ul {
+ul {
     list-style: none;
 }
 
@@ -60,6 +60,10 @@ a {
 h1,h2,h3,h4,h5,h6,p {
     cursor: default;
     color: var(--copy);
+}
+
+hr {
+    border: 2px solid red;
 }
 
 /* HEADER, LOGO, MAIN NAVIGATION, MOBILE MENU AND LOGIN */
@@ -146,6 +150,10 @@ h1,h2,h3,h4,h5,h6,p {
     border-radius: 3px;
     background-color: var(--white);
     margin: 6px 0;
+}
+
+.nav-active {
+    transform: translateX(0%);
 }
 
 /* HERO UNIT */
@@ -609,18 +617,14 @@ div.copyright {
         flex-direction: column;
         justify-content: flex-start;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        /* transition: transform 0.5s ease-in; */
     }
     .nav-links li {
-        opacity: 0;
+        opacity: 1;
     }
     .nav-links li a{
         height: 3rem;
     }
-}
-
-.nav-active {
-    transform: translateX(0%);
 }
 
 /* Animations */
