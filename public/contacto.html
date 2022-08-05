@@ -101,8 +101,33 @@
                 </div>
             </div>
         </div>
-
-
+        <section id="contact-form-section">
+            <div class="contact-form-wrapper">
+                <h3 class="contact-form-title">¿Tienes alguna duda?</h3>
+                <p class="contact-form-copy">¡Ponte en contacto con nosotros!</p>
+                <form action="#" method="post" id="contact-form">
+                    <label id="name-label" for="name">Nombre <span class="required-icon"><img src="_assets/required.svg"
+                                alt="Required Field"></span></label>
+                    <input type="text" id="name" required placeholder="Nombre completo">
+                    <label id="organizacion-label" for="organizacion">Organización <span class="required-icon"><img
+                                src="_assets/required.svg" alt="Required Field"></span></label>
+                    <input type="text" id="organizacion" required placeholder="Organización o Razón Social">
+                    <label id="email-label" for="email">Correo electrónico <span class="required-icon"><img
+                                src="_assets/required.svg" alt="Required Field"></span></label>
+                    <input type="email" id="email" required placeholder="Correo electrónico">
+                    <label id="comments-label" for="comments">Mensaje <span class="required-icon"><img
+                                src="_assets/required.svg" alt="Required Field"></span></label>
+                    <textarea id="comments" rows="8" cols="30" placeholder="Mensaje / Observaciones"></textarea>
+                    <span class="accept-privacy">
+                        <input type="checkbox" name="accept-privacy" id="accept-privacy" value="Privacy Accepted">
+                        Acepto el
+                        <a href="#">aviso de privacidad </a>
+                        de Sello Idi
+                    </span>
+                    <button class="contact-form-submit">enviar</button>
+                </form>
+            </div>
+        </section>
         <!-- BIG CTA -->
         <section class="big-cta">
             <div class="big-cta-wrapper">
