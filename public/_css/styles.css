@@ -796,7 +796,93 @@ button.contact-form-submit {
     box-shadow: 4px 4px 24px var(--red);
 }
 
+/* AVISO DE PRIVACIDAD */
+
+#privacy-section {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+.privacy-title{
+    color: var(--copy);
+    font-size: 2.625rem;
+    font-weight: 700;
+    line-height: 1.4;
+    padding: 0 0 2.65rem 0;
+}
+.privacy-subtitle{
+    font-weight: 800;
+    font-size: 1.375rem;
+    margin-bottom: 1.5rem;
+}
+.privacy-copy{
+    font-size: 1rem;
+    color:var(--copy);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.025rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.privacy-content p:last-of-type{
+    margin-bottom: 6rem;
+}
+
+
+
 /* MEDIA QUERIES */
+
+@media screen and (min-width: 20rem) {
+
+    .privacy-title {
+        font-size: 2rem;
+    }
+    .privacy-subtitle, .privacy-copy, .page-intro {
+        font-size: clamp(1rem, 0.75rem +1vw, 1.5rem);
+        padding: 0 0.75rem;
+    }
+    .hero-title {
+        padding: 0.3rem 0.5rem;
+        bottom: -1rem;
+        font-size: 1.125rem;
+        word-spacing: 0.5rem;
+        letter-spacing: 0.075rem;
+    }
+    section.hero-image-short{
+        margin-bottom: 2rem;
+        padding: 25%;
+    }
+    div.page-intro{
+        margin-bottom: 2rem;
+    }
+    div.page-intro p{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 30rem) {
+    .hero-title {
+        text-transform: uppercase;
+        font-weight: 800;
+        padding: 0.3rem 1rem;
+        color: var(--white);
+        position: absolute;
+        bottom: -1rem;
+        background-color: var(--red);
+        box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+        font-size: 3.125rem;
+        word-spacing: 1rem;
+        letter-spacing: 0.125rem;  
+    }
+
+}
+
+
+
+
 
 /* 1100 px */
 @media screen and  (max-width: 68.75rem) {
@@ -830,7 +916,7 @@ button.contact-form-submit {
         /* transition: transform 0.5s ease-in; */
     }
     .nav-links li {
-        opacity: 1;
+        opacity: 0;
     }
     .nav-links li a{
         height: 3rem;
