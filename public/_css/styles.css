@@ -832,10 +832,48 @@ button.contact-form-submit {
     margin-bottom: 6rem;
 }
 
+/* BACK TO TOP BUTTON */
+button.back-to-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 4.375rem;
+    height: 4.375rem;
+    position: fixed;
+    z-index: 10;
+    right: 1.5rem;
+    bottom: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--red);
+    cursor: pointer;
+    transform: translateX(200%);
+    transition: all 0.85s ease-out;
+}
+.back-to-top-icon{
+    margin: 0;
+    padding: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+button.back-to-top:hover {
+    background-color: rgba(240,85,105,.75);
+}
+button.back-to-top.active{
+    transform: translateX(0);
+}
+button.back-to-top.active::after{
+    content: "" !important;
+}
+button.back-to-top.active:active{
+    transform: scale(1.5); 
+}
+
 
 
 /* MEDIA QUERIES */
-
+/*
 @media screen and (min-width: 20rem) {
 
     .privacy-title {
@@ -863,6 +901,8 @@ button.contact-form-submit {
         font-size: 1rem;
     }
 }
+*/
+/*
 @media screen and (min-width: 30rem) {
     .hero-title {
         text-transform: uppercase;
@@ -879,18 +919,22 @@ button.contact-form-submit {
     }
 
 }
+*/
 
 
 
 
 
 /* 1100 px */
+/*
 @media screen and  (max-width: 68.75rem) {
     .nav-links{
         font-size: 0.825rem
     }
 }
+*/
 /* 960 px */
+/*
 @media screen and (max-width: 60rem) {
     body{
         overflow-x: hidden;
@@ -913,7 +957,7 @@ button.contact-form-submit {
         flex-direction: column;
         justify-content: flex-start;
         transform: translateX(100%);
-        /* transition: transform 0.5s ease-in; */
+        transition: transform 0.5s ease-in;
     }
     .nav-links li {
         opacity: 0;
@@ -922,7 +966,7 @@ button.contact-form-submit {
         height: 3rem;
     }
 }
-
+*/
 /* Animations */
 @keyframes navLinksFade {
     from{
