@@ -594,17 +594,24 @@ div.copyright {
 .faqs{
     margin: 1rem 0 5rem 0;
 }
-.accordion {
+button.accordion {
     background-color: #eee;
-    color: #444;
+    color: #222;
     cursor: pointer;
     padding: 1.125rem;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 1rem;
-    transition: 0.4s;
+    font-size: 1.125rem;
+    margin-block-end: 1.5rem;
+    border-radius: 0.313rem;
+    box-shadow: 2px 2px 12px #f9f9f9;
+    transition: 0.25s;
+
+  }
+  .accordion:hover{
+    box-shadow: 2px 2px 20px #ddd;
   }
   
   .active, .accordion:hover {
@@ -625,12 +632,20 @@ div.copyright {
     color: var(--red);
   }
   
-  .panel {
-    padding: 0 1.125rempx;
+  div.panel {
+    padding: 0 18px;
     background-color: white;
-    max-height: 0;
+    display: none;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: all 0.75s ease-out;
+    margin-block-end: 3rem;
+  }
+  div.panel p{
+    font-size: 1.125rem;
+    line-height: 1.7;
+    text-align: justify;
+    text-justify:distribute;
+    letter-spacing: 0.025ch;
   }
 
 
