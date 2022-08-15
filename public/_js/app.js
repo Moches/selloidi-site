@@ -4,42 +4,109 @@
 // console.log('Inclusión, Diversidad e Igualdad.');
 // console.log('(c) 2022 - Sello Idi');
 
-// // Interaction Start
+// NAVIGATION PROTOTYPE
 
-// const navSlide = () => {
-//   const toggle = document.querySelector('.toggle');
-//   const nav = document.querySelector('.nav-links');
-//   const navLinks = document.querySelectorAll('.nav-links li');
+var Navigation = function () {
+  this.constructor();
+};
 
-//   // console.log(toggle);
-//   // console.log(nav);
-//   // console.log(navLinks);
+Navigation.prototype = {
+  constructor: function () {
+    this.header = document.querySelector('header');
+    // this.servicesToggle = document.querySelector('button.sub-menu__toggle');
+    // this.servicesDrop = document.querySelector('div.sub-menu__drop');
+    // this.backdrop = document.querySelector('div.backdrop');
+    // this.timer = null;
+    this.menuToggle = document.querySelector('button.main-header-menu-toggle');
+    this.mobileMenu = document.querySelector('nav.mobile-nav');
 
-//   toggle.addEventListener('click', () => {
-//     nav.classList.toggle('.nav-active');
-//   });
-// };
+    // FADE HEDAER ON SCROLL
+    window.addEventListener(
+      'scroll',
+      function () {
+        if (window.scrollY > 10) this.header.classList.add('solid');
+        else this.header.classList.remove('solid');
+      }.bind(this)
+    );
 
-// navSlide();
+    // SERVICES TOGGLE EVENTS FOR SUBMENUS
+    // this.servicesToggle.addEventListener(
+    //   'mouseenter',
+    //   function () {
+    //     clearTimeout(this.timer);
+    //     this.showServicesMenu.call(this);
+    //   }.bind(this)
+    // );
 
-// Accordion for FAQs
+    // this.servicesToggle.addEventListener(
+    //   'mouseleave',
+    //   function () {
+    //     this.timer = setTimeout(this.hideServicesMenu.bind(this), 100);
+    //   }.bind(this)
+    // );
 
-// var accordion = document.getElementsByClassName('accordion');
-// var i;
+    // SERVICES DROPDOWN EVENTS
+    // this.servicesDrop.addEventListener(
+    //   'mouseenter',
+    //   function () {
+    //     clearTimeout(this.timer);
+    //   }.bind(this)
+    // );
 
-// console.log(accordion);
+    // this.servicesDrop.addEventListener(
+    //   'mouseleave',
+    //   function () {
+    //     this.timer = setTimeout(this.hideServicesMenu.bind(this), 100);
+    //   }.bind(this)
+    // );
 
-// for (i = 0; i<acc.length; i++) {
-//   accordion[i].addEventListener('click', function () {
-//     this.classList.toggle('active');
-//     var panel = this.nextElementSibling;
-//     if (panel.style.display === 'block') {
-//       panel.style.display = 'none';
-//     } else {
-//       panel.style.display = 'block';
-//     }
-//   });
-// }
+    // Mobile menu events
+    this.menuToggle.addEventListener(
+      'click',
+      function () {
+        if (this.menuToggle.getAttribute('data-state') === 'off') {
+          this.showMobileMenu();
+        } else {
+          this.hideMobileMenu();
+        }
+      }.bind(this)
+    );
+  },
+  //   showServicesMenu: function () {
+  //     this.servicesDrop.setAttribute('style', 'display: block');
+  //     setTimeout(
+  //       function () {
+  //         this.servicesToggle.setAttribute('data-state', 'on');
+  //       }.bind(this),
+  //       20
+  //     );
+  //     this.backdrop.setAttribute('style', 'display: block');
+  //     setTimeout(
+  //       function () {
+  //         this.backdrop.setAttribute('data-state', 'on');
+  //       }.bind(this),
+  //       20
+  //     );
+  //   },
+  //   hideServicesMenu: function () {
+  //     this.servicesToggle.setAttribute('data-state', 'off');
+  //     this.servicesDrop.removeAttribute('style');
+  //     this.backdrop.setAttribute('data-state', 'off');
+  //     this.backdrop.removeAttribute('style');
+  //   },
+  showMobileMenu: function () {
+    document.body.classList.add('noscroll');
+    this.menuToggle.setAttribute('data-state', 'on');
+    this.mobileMenu.setAttribute('data-state', 'on');
+    this.header.classList.add('solid');
+  },
+  hideMobileMenu: function () {
+    this.menuToggle.setAttribute('data-state', 'off');
+    this.mobileMenu.setAttribute('data-state', 'off');
+    this.header.classList.remove('solid');
+    document.body.classList.remove('noscroll');
+  },
+};
 
 // BACK TO TOP PROTOTYPE
 var backToTop = function () {
@@ -71,5 +138,6 @@ backToTop.prototype = {
 // START ON DOM AND CONTENT LOAD
 document.addEventListener('DOMContentLoaded', function () {
   // ADD BACK TO TOP INSTANCE
+  new Navigation();
   new backToTop();
 });

@@ -21,36 +21,50 @@
 
 </head>
 
-<body>
+<body class="seamless">
 
     <!-- HEADER -->
-    <header class="header-container">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html"><img src="_assets/logo-sello-idi_140x50.png" alt="Logo Sello Idi"
-                        title="Logotipo Sello IDI"></a>
-            </div>
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
-                    <li><a href="sello-idi.html">sello idi</a></li>
-                    <li><a href="certificacion.html">certificación</a></li>
-                    <li><a href="auditoria.html">auditoría</a></li>
-                    <li><a href="preguntas-frecuentes.html">preguntas frecuentes</a></li>
-                    <li><a href="#">contacto</a></li>
-                </ul>
+    <header class="main-header">
+        <div class="main-header-wrapper">
+
+            <!-- LOGO -->
+            <a href="index.html" class="header-logo">
+                <img src="_assets/logo-sello-idi_140x50.png" alt="Company Logo" width="140" height="50">
+            </a>
+            <!-- LOGO END -->
+
+            <!-- DESKTOP NAV -->
+            <nav class="main-header-nav">
+                <a href="index.html" class="nav-links">inicio</a>
+                <a href="sello-idi.html" class="nav-links">sello idi</a>
+                <a href="certificacion.html" class="nav-links">certificación</a>
+                <a href="auditoria.html" class="nav-links">audotría</a>
+                <a href="preguntas-frecuentes.html" class="nav-links">preguntas frecuentes</a>
+                <a href="#" class="nav-links">contacto</a>
             </nav>
-            <div class="loginRegister">
-                <a href="#" target="_blank"><span>Inicio</span> <i class="fa-solid fa-right-to-bracket"></i></a>
-            </div>
-            <div class="toggle">
-                <div class="item1"></div>
-                <div class="item2"></div>
-                <div class="item3"></div>
-            </div>
+            <!-- DESKTOP NAV END -->
+
+            <!-- LANGUAGE SELECTION TOGGLE -->
+            <a href="index.html" class="main-header-toggle-selection" data-lang="es">
+                <span class="main-header-language">es</span>
+                <span class="main-header-language">en</span>
+            </a>
+            <!-- LANGUAGE SELECTION TOGGLE END -->
+
+            <!-- MENU ICON TOGGLE -->
+            <button class="main-header-menu-toggle" data-state="off">
+                <span class="menu-toggle-menu-icon">
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                </span>
+            </button>
+            <!-- MENU ICON TOGGLE END -->
+
         </div>
     </header>
     <!-- HEADER END -->
+
     <!-- MAIN -->
     <main>
         <!-- HERO IMAGE - CONTACTO -->
