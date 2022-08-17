@@ -16,8 +16,8 @@
     <link rel="icon" href="_assets/icon_16x16.png" type="image/x-icon">
     <!-- Css Stylesheet -->
     <link rel="stylesheet" href="_css/styles.css">
-    <!-- Fonawesome -->
-    <script src="https://kit.fontawesome.com/7e6a376b36.js" crossorigin="anonymous"></script>
+    <!-- Swipper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
 </head>
 
@@ -102,43 +102,62 @@
 
     <!-- MAIN -->
     <main>
-        <!-- HERO SLIDER -->
-        <section class="heroSlider">
-            <div class="hero-wrapper">
-                <div class="hero-slides">
-                    <!-- SLIDE 1 -->
-                    <div class="slide">
-                        <h1 class="slide-title">Slide Title 01</h1>
-                        <p class="slide-copy">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button class="slide-button">Lorem Ipsum</button>
-                    </div>
-                    <!-- SLIDE 2 -->
-                    <div class="slide">
-                        <h1 class="slide-title">Slide Title 02</h1>
-                        <p class="slide-copy">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button class="slide-button">Lorem Ipsum</button>
-                    </div>
-                    <!-- SLIDE 3 -->
-                    <div class="slide">
-                        <h1 class="slide-title">Slide Title 03</h1>
-                        <p class="slide-copy">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button class="slide-button">Lorem Ipsum</button>
-                    </div>
-                    <button class="slide-left"><img src="_assets/chevron-left.svg" alt=""></button>
-                    <button class="slide-right"><img src="_assets/chevron-right.svg" alt=""></button>
 
+        <!-- HERO SLIDER -->
+        <section class="hero">
+            <div class="hero__wrapper">
+                <div class="hero__slides">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- TEXT ITEM 01 -->
+                            <div class="swiper-slide">
+                                <h2 class="hero__title"><strong>Autodiagnóstico</strong> de Igualdad, Diversidad e
+                                    Inclusión
+                                </h2>
+                                <p class="hero__teaser">Evalúa el nivel de Igualdad, diversidad e inclusión dentro de tu
+                                    organización. Totalmente Gratis y sin necesidad de proporcionar tarjeta de crédito.
+                                </p>
+                                <a href="#" class="hero__cta">Autodiagnóstico</a>
+                            </div>
+                            <!-- TEXT ITEM 01 END -->
+
+                            <!-- TEXT ITEM 02 -->
+                            <div class="swiper-slide">
+                                <h2 class="hero__title"><strong>Beneficios </strong> del Sello Idi</h2>
+                                <p class="hero__teaser">Mide el nivel de Igualdad, diversidad e inclusión dentro de tu
+                                    organización. Totalmente Gratis y sin necesidad de tarjeta de crédito. </p>
+                                <a href="#" class="hero__cta">Autodiagnóstico</a>
+                            </div>
+                            <!-- TEXT ITEM 02 END -->
+
+                            <!-- TEXT ITEM 03 -->
+                            <div class="swiper-slide">
+                                <h2 class="hero__title"><strong>Alianza </strong> de Profesionales</h2>
+                                <p class="hero__teaser">Mide el nivel de Igualdad, diversidad e inclusión dentro de tu
+                                    organización. Totalmente Gratis y sin necesidad de tarjeta de crédito.</p>
+                                <a href="#" class="hero__cta">Autodiagnóstico</a>
+                            </div>
+                            <!-- TEXT ITEM 03 END -->
+
+                        </div>
+                    </div>
+                    <button class="slides__nav-button-left">
+                        <img src="_assets/chevron-left-black.svg" width="34" height="63" alt="Left" />
+                    </button>
+                    <button class="slides__nav-button-right">
+                        <img src="_assets/chevron-right-black.svg" width="34" height="63" alt="Left" />
+                    </button>
                 </div>
-                <div class="more-buttons-wrapper">
-                    <a href="#beneficio" class="more-button"><span>beneficios</span><img src="_assets/down-arrow.svg"
-                            width="22" height="22" alt="Beneficios"></a>
-                    <a href="#obtenerlo" class="more-button"><span>cómo obtenerlo</span><img
-                            src="_assets/down-arrow.svg" width="22" height="22" alt="Cómo Obtener"></a>
-                    <a href="#certificate" class="more-button"><span>certificate</span><img src="_assets/down-arrow.svg"
-                            width="22" height="22" alt="Certificate"></a>
-                </div>
+                <button class="hero__more-cta">
+                    <span>beneficios</span>
+                    <img src="_assets/arrow-down-red.svg" width="22" height="22" alt="Beneficios" />
+                </button>
+                <div class="hero__bullets"></div>
             </div>
         </section>
-        <!-- HERO END -->
+        <!-- HERO SLIDER END -->
+
         <!-- BENEFICIOS -->
         <section id="beneficio" class="beneficios">
             <div class="beneficios-wrapper">
@@ -343,6 +362,7 @@
     <!-- BACK TO TOP BUTTON END-->
 
     <!-- Js -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="_js/app.js"></script>
 </body>
 

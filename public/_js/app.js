@@ -108,7 +108,121 @@ Navigation.prototype = {
   },
 };
 
+// HERO SLIDER PROTOTYPE
+
+var MainSlider = function () {
+  this.constructor();
+};
+
+MainSlider.prototype = {
+  constructor: function () {
+    this.hero = document.querySelector('section.hero');
+    this.mainSlider = this.hero.querySelector('div.swiper');
+    this.slides = this.hero.querySelectorAll('div.swiper-slide');
+    this.sliderBulletsBox = this.hero.querySelector('div.hero__bullets');
+    this.btnPrev = this.hero.querySelector('button.slides__nav-button-left');
+    this.btnNext = this.hero.querySelector('button.slides__nav-button-right');
+    this.timer = null;
+    this.scrollButton = this.hero.querySelector('button.hero__more-cta');
+
+    // Create slider bullets
+    for (var i = 0; i < this.slides.length; i++) {
+      var bullet = document.createElement('span');
+      if (i === 0) bullet.classList.add('active');
+      this.sliderBulletsBox.append(bullet);
+    }
+    this.bullets = this.sliderBulletsBox.querySelectorAll('span');
+
+    // Scroll button event
+    this.scrollButton.addEventListener(
+      'click',
+      function () {
+        var offset;
+        if (window.innerWidth > 959) offset = 60;
+        else offset = 100;
+        window.scrollTo({
+          top: this.hero.offsetHeight - offset,
+          behavior: 'smooth',
+        });
+      }.bind(this)
+    );
+
+    // Brakpoint event
+    this.breakpoint = window.matchMedia('(max-width:59.99rem)');
+    this.breakpoint.addListener(this.checkBreakpoint.bind(this));
+    this.checkBreakpoint();
+  },
+  setBullet: function (index) {
+    for (var i = 0; i < this.bullets.length; i++) {
+      if (index === i) this.bullets[i].setAttribute('class', 'active');
+      else this.bullets[i].removeAttribute('class');
+    }
+  },
+  checkBreakpoint: function () {
+    var speed, effect;
+
+    if (this.swiper !== undefined) this.swiper.destroy(true, true);
+    if (this.breakpoint.matches === true) {
+      speed = 300;
+      effect = 'slide';
+    } else {
+      speed = 1000;
+      effect = 'fade';
+    }
+
+    this.startSwiper(speed, effect);
+  },
+  startSwiper: function (speed, effect) {
+    // Create swiper instance
+    this.swiper = new Swiper(this.mainSlider, {
+      loop: true,
+      speed: speed,
+      effect: effect,
+      fadeEffect: { crossFade: true },
+    });
+
+    // Slide change swiper event
+    this.swiper.on(
+      'slideChange',
+      function () {
+        clearTimeout(this.timer);
+        this.setBullet(this.swiper.realIndex);
+        this.timer = setTimeout(
+          function () {
+            this.swiper.slideNext(speed, true);
+          }.bind(this),
+          9000
+        );
+      }.bind(this)
+    );
+
+    // Slider button events
+    this.btnNext.addEventListener(
+      'click',
+      function () {
+        this.swiper.slideNext(speed, true);
+      }.bind(this)
+    );
+
+    this.btnPrev.addEventListener(
+      'click',
+      function () {
+        this.swiper.slidePrev(speed, true);
+      }.bind(this)
+    );
+
+    // Start auto slide
+    this.timer = setTimeout(
+      function () {
+        this.swiper.slideNext(speed, true);
+      }.bind(this),
+      9000
+    );
+  },
+};
+
 // BACK TO TOP PROTOTYPE
+
 var backToTop = function () {
   this.constructor();
 };
@@ -140,4 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // ADD BACK TO TOP INSTANCE
   new Navigation();
   new backToTop();
+
+  // Create main slider instance
+  if (document.querySelector('section.hero') !== null) new MainSlider();
 });
