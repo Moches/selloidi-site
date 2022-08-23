@@ -221,6 +221,62 @@ MainSlider.prototype = {
   },
 };
 
+// CARRUSEL SLIDER PROTOTYPE
+var DirectorySlider = function () {
+  this.constructor();
+};
+
+DirectorySlider.prototype = {
+  constructor: function () {
+    this.container = document.querySelector('div.directory');
+    this.wrapper = this.container.querySelector('div.directory__wrapper');
+    this.items = this.container.querySelectorAll('div.directory__position');
+    this.current = 0;
+    this.btnLeft = this.container.querySelector('button[data-mode="left"]');
+    this.btnRight = this.container.querySelector('button[data-mode="right"]');
+    this.itemWidth = this.items[0].offsetWidth;
+
+    this.btnLeft.addEventListener(
+      'click',
+      function () {
+        this.scroll('left');
+      }.bind(this)
+    );
+
+    this.btnRight.addEventListener(
+      'click',
+      function () {
+        this.scroll('right');
+      }.bind(this)
+    );
+
+    window.addEventListener(
+      'resize',
+      function () {
+        this.itemWidth = this.items[0].offsetWidth;
+        this.wrapper.scrollLeft = 0;
+        this.current = 0;
+      }.bind(this)
+    );
+  },
+  scroll: function (dir) {
+    switch (dir) {
+      case 'left':
+        if (this.current > 0) this.current--;
+        this.wrapper.scrollLeft = this.items[this.current].offsetLeft;
+        break;
+      case 'right':
+        if (
+          (this.items.length - this.current) * this.itemWidth >
+          this.wrapper.offsetWidth
+        )
+          this.current++;
+        this.wrapper.scrollLeft = this.items[this.current].offsetLeft;
+        break;
+    }
+  },
+};
+
 // BACK TO TOP PROTOTYPE
 
 var backToTop = function () {
@@ -251,10 +307,13 @@ backToTop.prototype = {
 
 // START ON DOM AND CONTENT LOAD
 document.addEventListener('DOMContentLoaded', function () {
-  // ADD BACK TO TOP INSTANCE
+  // CREATE NAVIGATION INSTANCE
   new Navigation();
   new backToTop();
 
   // Create main slider instance
   if (document.querySelector('section.hero') !== null) new MainSlider();
+
+  // Create directory slider instance
+  if (document.querySelector('div.directory') !== null) new DirectorySlider();
 });
