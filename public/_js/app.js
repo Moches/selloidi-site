@@ -277,6 +277,27 @@ DirectorySlider.prototype = {
   },
 };
 
+// FOOTER PROTOTYPE
+
+var Footer = function () {
+  this.constructor();
+};
+
+Footer.prototype = {
+  constructor: function () {
+    this.container = document.querySelector('footer');
+    this.toggles = this.container.querySelectorAll('button.footer__toggle');
+
+    for (var i = 0; i < this.toggles.length; i++) {
+      this.toggles[i].addEventListener('click', function () {
+        if (this.getAttribute('data-state') === 'off')
+          this.setAttribute('data-state', 'on');
+        else this.setAttribute('data-state', 'off');
+      });
+    }
+  },
+};
+
 // BACK TO TOP PROTOTYPE
 
 var backToTop = function () {
@@ -309,6 +330,7 @@ backToTop.prototype = {
 document.addEventListener('DOMContentLoaded', function () {
   // CREATE NAVIGATION INSTANCE
   new Navigation();
+  new Footer();
   new backToTop();
 
   // Create main slider instance
