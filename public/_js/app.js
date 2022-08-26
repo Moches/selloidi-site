@@ -222,6 +222,7 @@ MainSlider.prototype = {
 };
 
 // CARRUSEL SLIDER PROTOTYPE
+
 var DirectorySlider = function () {
   this.constructor();
 };
@@ -274,6 +275,70 @@ DirectorySlider.prototype = {
         this.wrapper.scrollLeft = this.items[this.current].offsetLeft;
         break;
     }
+  },
+};
+
+// STEP BY STEP TABS PROTOTYPE
+
+var OurHistory = function () {
+  this.constructor();
+};
+OurHistory.prototype = {
+  constructor: function () {
+    (this.container = document.querySelector('section.our-history')),
+      (this.buttons = this.container
+        .querySelector('div.our-history__controls')
+        .querySelectorAll('button')),
+      (this.pages = this.container.querySelectorAll(
+        'div.our-history__page-item'
+      )),
+      (this.bottom = this.container.querySelector('div.our-history__bottom')),
+      (this.btnNext = this.container.querySelector('button.bottom__button')),
+      this.buttons.forEach(
+        function (t) {
+          t.addEventListener(
+            'click',
+            function () {
+              this.setYear(t.getAttribute('data-year'));
+            }.bind(this)
+          );
+        }.bind(this)
+      ),
+      this.btnNext.addEventListener(
+        'click',
+        function () {
+          var t =
+            this.container.getBoundingClientRect().top +
+            (window.pageYOffset || document.documentElement.scrollTop);
+          window.scrollTo({
+            top: t,
+            behavior: 'smooth',
+          }),
+            this.setYear(this.btnNext.getAttribute('data-year'));
+        }.bind(this)
+      );
+  },
+  setYear: function (t) {
+    var e = ['1', '2', '3', '4'];
+    e.indexOf(t) < e.length - 1
+      ? (this.btnNext.setAttribute('data-year', e[e.indexOf(t) + 1]),
+        (this.btnNext.innerText = e[e.indexOf(t) + 1]),
+        this.bottom.removeAttribute('data-state'))
+      : this.bottom.setAttribute('data-state', 'hidden'),
+      this.buttons.forEach(
+        function (e) {
+          e.getAttribute('data-year') !== t
+            ? e.setAttribute('data-state', 'off')
+            : e.setAttribute('data-state', 'on');
+        }.bind(this)
+      ),
+      this.pages.forEach(
+        function (e) {
+          e.getAttribute('data-year') !== t
+            ? e.setAttribute('data-state', 'off')
+            : e.setAttribute('data-state', 'on');
+        }.bind(this)
+      );
   },
 };
 
@@ -338,4 +403,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Create directory slider instance
   if (document.querySelector('div.directory') !== null) new DirectorySlider();
+
+  // Create step by step tabs instance
+  null !== document.querySelector('section.our-history') && new OurHistory();
 });

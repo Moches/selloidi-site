@@ -63,7 +63,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 hr {
-    border: 2px solid red;
+    border: 2px solid var(--copy);
 }
 
 /* HEADER, LOGO, MAIN NAVIGATION, MOBILE MENU AND LOGIN */
@@ -745,7 +745,8 @@ section.hero div.hero__wrapper div.hero__bullets {
     background-color: rgba(255,255,255,0.5);
 }
 
-/* SECCION BENEFICIOS */
+/* LANDING PAGE - BENEFICIOS */
+
 section.beneficios{
     background-color: var(--white);
     display: flex;
@@ -809,7 +810,7 @@ section.beneficios{
     margin: 1rem 0;
 }
 
-/* SECCIÓN COMO OBTENER EL SELLO IDI */
+/* LANDING PAGE - COMO OBTENER EL SELLO IDI */
 
 section.obtenerlo{
     background-color:var(--white);
@@ -877,7 +878,7 @@ section.obtenerlo{
     text-justify: auto;
 }
 
-/* SECCIÓN CERTIFICA TU ORGANIZACION */
+/* COMPONENTE CERTIFICA TU ORGANIZACION */
 
 section.certificate{
     background-color: var(--yellow);
@@ -950,7 +951,7 @@ section.certificate{
     padding-bottom: 2rem;
 }
 
-/* BIG CTA */
+/* COMPONENTE - BIG CTA */
 
 section.big-cta{
     background-color: var(--red);
@@ -976,6 +977,7 @@ section.big-cta{
     line-height: 1.4;
     text-align: center;
     padding: 3rem 0;
+    color: var(--white);
 }
 
 .big-cta-wrapper a {
@@ -991,7 +993,7 @@ section.big-cta{
     display: inline;
 }
 
-/* SECCIÓN ORGANIZACIONES CERTIFICADAS */
+/* COMPONENTE - ORGANIZACIONES CERTIFICADAS */
 
 .organizaciones-certificadas {
     width: 100%;
@@ -1001,7 +1003,7 @@ section.big-cta{
     margin-block-start: 3rem;
     margin-block-end: 1.5rem;
     font-size: 3rem;
-    color: #222;
+    color: rgb(34, 34, 34);
 }
 .link-organizaciones {
     color: #222;
@@ -1014,7 +1016,7 @@ section.big-cta{
     transition: all 0.3s;
 }
 
-/* CARRUSEL ORGANIZACIONES CERTIFICADAS */
+/* CARRUSEL-SLIDER - ORGANIZACIONES CERTIFICADAS */
 
 div.directory {
     display: -webkit-box;
@@ -1211,7 +1213,7 @@ button.directory__button-control {
     border: none;
 }
 
-/* FOOTER */
+/* COMPONENTE - FOOTER */
 
 footer div.footer__wrapper div.footer__body div.footer__col a.footer__contact-cta {
     display: -webkit-box;
@@ -1703,6 +1705,359 @@ footer div.footer__bottom p.footer__copy {
     color: #fff;
 }
 
+
+/* PÁGINA - SELLO IDI */
+
+/* PAGINA - CERTIFICACIÓN */
+
+
+
+
+/* TABS - PASO A PASO */
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__content p.our-history__paragraph {
+    font-size: 1rem;
+    line-height: 1.44;
+    font-weight: 300;
+    margin-bottom: 1.375rem;
+    color: #222;
+}
+
+@media (min-width: 60rem) {
+    section.our-history div.our-history__wrapper div.our-history__columns div.our-history__content p.our-history__paragraph {
+        font-size:1.125rem;
+    }
+}
+
+section.our-history div.our-history__wrapper h2.our-history__title {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 160%;
+    margin: 1rem 0 0.5rem 0;
+}
+
+@media (min-width: 60rem) {
+    section.our-history div.our-history__wrapper h2.our-history__title {
+        font-size:2.2rem;
+        margin: 2rem 0 1rem 0;
+    }
+}
+
+@media (min-width: 70rem) {
+    section.our-history div.our-history__wrapper h2.our-history__title {
+        font-size:2.875rem;
+    }
+}
+
+section.our-history {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 1.5rem;
+    margin-bottom: 3rem;
+    background-color: #f8f8f8;
+}
+
+section.our-history div.our-history__wrapper {
+    max-width: 50rem;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+section.our-history div.our-history__wrapper h2.our-history__title {
+    text-align: center;
+    margin-top: 0;
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media (min-width: 32rem) {
+    section.our-history div.our-history__wrapper div.our-history__columns {
+        gap:0 1.5rem;
+    }
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 1rem 0 1.5rem 0;
+    gap: 0 0.8rem;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__controls::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 32rem) {
+    section.our-history div.our-history__wrapper div.our-history__columns div.our-history__controls {
+        display:-webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        gap: 0 0.6rem;
+        margin: 0.5rem 0 0 0;
+    }
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__controls button.our-history__button {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 10.25rem;
+    height: 4.25rem;
+    border: 2px solid #368DCC;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.step-number {
+    color: #fff;
+    margin-right: .5rem;
+    background-color: #368DCC;
+    padding: 0.5rem 0.75rem;
+    border-radius: 50%;
+}
+
+.step-number:hover {
+    color: #368DCC;
+    background-color: #fff;
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__controls button.our-history__button:active {
+    background-color: #c3d6ef;
+    border-color: #368DCC;
+}
+
+@media (min-width: 32rem) {
+    section.our-history div.our-history__wrapper div.our-history__columns div.our-history__controls button.our-history__button {
+        margin-bottom:1rem;
+    }
+
+    section.our-history div.our-history__wrapper div.our-history__columns div.our-history__controls button.our-history__button:hover {
+        background-color: white;
+        border-color: #F05566;
+    }
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__controls button.our-history__button[data-state="on"] {
+    background-color: #368DCC;
+    border-color: #c3d6ef;
+    color: white;
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__controls span.our-hitory__pipe {
+    font-size: 1rem;
+    font-weight: 300;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+@media (min-width: 32rem) {
+    section.our-history div.our-history__wrapper div.our-history__columns div.our-history__controls span.our-hitory__pipe {
+        display:none;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__content {
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__content div.our-history__page-item {
+    display: none;
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__content div.our-history__page-item[data-state="on"] {
+    display: initial;
+}
+
+section.our-history div.our-history__wrapper div.our-history__columns div.our-history__content p.our-history__paragraph {
+    font-size: 1.06rem;
+}
+
+@media (min-width: 32rem) {
+    section.our-history div.our-history__wrapper div.our-history__columns div.our-history__content p.our-history__paragraph {
+        text-align:justify;
+    }
+}
+
+section.our-history div.our-history__wrapper div.our-history__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media (min-width: 32rem) {
+    section.our-history div.our-history__wrapper div.our-history__bottom {
+        display:none;
+    }
+}
+
+section.our-history div.our-history__wrapper div.our-history__bottom span.bottom__arrow {
+    margin-right: 1rem;
+}
+
+section.our-history div.our-history__wrapper div.our-history__bottom button.bottom__button {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 4.25rem;
+    height: 4.25rem;
+    border: 2px solid #368DCC;
+    /* border-radius: 50%; */
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: white;
+    cursor: pointer;
+}
+
+section.our-history div.our-history__wrapper div.our-history__bottom button.bottom__button:active {
+    background-color: white;
+    border-color: #F05566;
+}
+
+@media (min-width: 32rem) {
+    section.our-history div.our-history__wrapper div.our-history__bottom button.bottom__button:hover {
+        background-color:white;
+        border-color: #F05566;
+    }
+}
+
+section.our-history div.our-history__wrapper div.our-history__bottom[data-state="hidden"] {
+    display: none;
+}
+
+h2.tab-item-title {
+    text-align: center;
+    padding: 1.5rem 0 2rem 0;
+    font-size: 3rem;
+    color: #222;
+}
+
+div.our-history-cta{
+    text-align: center;
+    margin: 6rem 0;
+}
+
+a.our-history-cta {
+    background-color:#F05566;
+    padding: 1rem 3.5rem;
+    border-radius: 0.325rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 3rem;
+}
+
+a.our-history-cta:hover {
+    box-shadow: 1px 3px 12px #F05566;
+    transition: all 0.3s;
+}
+img.our-history-cta-icon {
+    margin-left: 2rem;
+}
+
+h3.tab-item-subtitle {
+    font-size: 2rem;
+}
+
+.gerencia {
+    color: #F5BC5C;
+}
+.talento {
+    color: #368DCC;
+}
+.sesgos {
+    color:#F05566;
+}
+
+/* PAGINA - AUDITORÍA */
+
+
+
 /* PREGUNTAS FRECUENTES */
 
 .faqs{
@@ -1764,7 +2119,7 @@ button.accordion {
     letter-spacing: 0.025ch;
   }
 
-/* CONTACTO */
+/* PÁGINA - CONTACTO */
 
 .hero-title {
     text-transform: uppercase;
@@ -1947,7 +2302,13 @@ button.contact-form-submit {
     box-shadow: 4px 4px 24px var(--red);
 }
 
-/* AVISO DE PRIVACIDAD */
+
+/* PÁGINA - EMPRESA, ACERCA DE */
+
+
+
+
+/* PÁGINA - AVISO DE PRIVACIDAD */
 
 #privacy-section {
     background-color: var(--white);
@@ -1986,7 +2347,7 @@ button.contact-form-submit {
     margin-bottom: 6rem;
 }
 
-/* BACK TO TOP BUTTON */
+/* COMPONENTE - BACK TO TOP */
 
 button.back-to-top {
     display: flex;
@@ -2029,8 +2390,6 @@ button.back-to-top.active:active{
 }
 
 /* SEAMLESS */
-
-
 body.seamless {
     padding-top: 3.25rem;
     background-color: #fff;
@@ -2042,7 +2401,6 @@ body.noscroll {
 }
 
 /* MEDIA QUERIES */
-
 @media (min-width: 20rem) {
     /* Display when the viewport is bigger than 320 px */
 
